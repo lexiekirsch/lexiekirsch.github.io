@@ -1,0 +1,28 @@
+body {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 14pt;
+	color: #66ccff;
+}
+
+.experience-list { 
+	text-indent: 10px;
+}
+
+.page-links {
+	text-align: center;
+}
+
+.elephant-image {
+	display: block;
+	margin: 0px auto;
+	width: 340px;
+	height: 230px;
+}
+
+h1 {
+	text-align: center;
+}
+
+h1, h2 {
+	font-weight: bold;
+}
