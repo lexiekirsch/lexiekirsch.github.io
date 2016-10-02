@@ -1,7 +1,7 @@
 body {
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 14pt;
-	color: #66ccff;
+	color: #0000ff;
 }
 
 .experience-list { 
@@ -10,6 +10,27 @@ body {
 
 .page-links {
 	text-align: center;
+}
+
+.page-links a {
+	text-decoration: none; /* do not underline the link */
+	border: 2px solid #0099ff;
+	background-color: #66ccff;
+	border-radius: 5px; /* rounded corners */
+	padding: 5px;
+	transition: background-color 300ms;
+}
+
+.page-links a:hover {
+	background-color: #33bbff;
+}
+
+.back-button a {
+	text-decoration: none; /* do not underline the link */
+	border: 2px solid #0099ff;
+	background-color: #66ccff;
+	border-radius: 5px; /* rounded corners */
+	padding: 5px;
 }
 
 .elephant-image {
