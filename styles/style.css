@@ -2,6 +2,7 @@ body {
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 14pt;
 	color: #0000ff;
+	background-color: #ffff00;
 }
 
 .experience-list { 
@@ -14,23 +15,28 @@ body {
 
 .page-links a {
 	text-decoration: none; /* do not underline the link */
-	border: 2px solid #0099ff;
-	background-color: #66ccff;
+	border: 2px solid #0000ff;
+	background-color: #00ff00;
 	border-radius: 5px; /* rounded corners */
 	padding: 5px;
 	transition: background-color 300ms;
 }
 
 .page-links a:hover {
-	background-color: #33bbff;
+	background-color: #ff00ff;
 }
 
 .back-button a {
 	text-decoration: none; /* do not underline the link */
-	border: 2px solid #0099ff;
-	background-color: #66ccff;
+	border: 2px solid #0000ff;
+	background-color: #00ff00;
 	border-radius: 5px; /* rounded corners */
 	padding: 5px;
+	transition: background-color 300ms;
+}
+
+.back-button a:hover {
+	background-color: #ff00ff;
 }
 
 .elephant-image {
@@ -41,6 +47,9 @@ body {
 }
 
 h1 {
+	border: 2px solid #0000ff;
+	background-color: #00ff00;
+	border-radius: 5px;
 	text-align: center;
 }
 
