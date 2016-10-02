@@ -46,13 +46,43 @@ body {
 	height: 230px;
 }
 
+.bio-text {
+	border: 2px solid #0000ff;
+	background-color: #00ff00;
+	border-radius: 5px;
+	padding: 5px;
+}
+
 h1 {
+	font-weight: bold;
 	border: 2px solid #0000ff;
 	background-color: #00ff00;
 	border-radius: 5px;
 	text-align: center;
 }
 
-h1, h2 {
-	font-weight: bold;
+.title-name {
+	margin: auto;
+	width: 40%;
+}
+
+table {
+	width: 100%;
+	border: 2px solid #0000ff;
+	border-radius: 5px;
+	background-color: #00ff00;
+	transition: background-color 300ms;
+}
+
+th {
+	vertical-align: top;
+	padding: 10px;
+}
+
+th, td {
+	border-bottom: 1px solid #0000ff;
+}
+
+tr:hover {
+	background-color: #ff00ff;
 }
