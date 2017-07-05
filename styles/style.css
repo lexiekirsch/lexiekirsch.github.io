@@ -1,88 +1,159 @@
+
+/* animation */
+
+@keyframes rainbow {
+	0% {background-color: rgba(255, 0, 0, 0.5);}
+	20% {background-color: rgba(255, 165, 0, 0.5);}
+	40% {background-color: rgba(255, 255, 0, 0.5);}
+	60% {background-color: rgba(0, 255, 0, 0.5);}
+	80% {background-color: rgba(0, 0, 255, 0.5);}
+	90% {background-color: rgba(75, 0, 130, 0.5);}
+	100% {background-color: rgba(255, 0, 0, 0.5);}
+}
+
+/* body */
+
 body {
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-size: 14pt;
-	color: #0000ff;
-	background-color: #ffff00;
-}
-
-.experience-list { 
-	text-indent: 10px;
-}
-
-.page-links {
+	font-family: Helvetica;
 	text-align: center;
+	background: red;
+	animation-name: rainbow;
+	animation-duration: 30s;
+	animation-iteration-count: infinite;
 }
 
-.page-links a {
-	text-decoration: none; /* do not underline the link */
-	border: 2px solid #0000ff;
-	background-color: #00ff00;
-	border-radius: 5px; /* rounded corners */
-	padding: 5px;
-	transition: background-color 300ms;
-}
-
-.page-links a:hover {
-	background-color: #ff00ff;
-}
-
-.back-button a {
-	text-decoration: none; /* do not underline the link */
-	border: 2px solid #0000ff;
-	background-color: #00ff00;
-	border-radius: 5px; /* rounded corners */
-	padding: 5px;
-	transition: background-color 300ms;
-}
-
-.back-button a:hover {
-	background-color: #ff00ff;
-}
-
-.elephant-image {
-	display: block;
-	margin: 0px auto;
-	width: 340px;
-	height: 230px;
-}
-
-.bio-text {
-	border: 2px solid #0000ff;
-	background-color: #00ff00;
-	border-radius: 5px;
-	padding: 5px;
-}
+/* headers */
 
 h1 {
-	font-weight: bold;
-	border: 2px solid #0000ff;
-	background-color: #00ff00;
+	color: white;
+	text-shadow: 1px 1px 2px black, 0 0 25px gray;
+	display: inline-block;
+}
+
+h1:hover {
+	transform: scale(1.2, 1.2);
+}
+
+/* buttons */
+
+.button {
+	text-decoration: none;
+	color: black;
+	background-color: white;
+	border: 2px solid gray;
 	border-radius: 5px;
-	text-align: center;
+	padding: 10px;
+	transition-duration: 0.3s;
 }
 
-.title-name {
-	margin: auto;
-	width: 40%;
+.button:hover {
+	background-color: #e7e7e7;
 }
 
-table {
+#home {
+	margin: 5px;
+	display: inline-block;
+	float: left;
+}
+
+/* FOR INDEX.HTML */
+
+.index h1 {
+	display: block;
+}
+
+.cover {
+	background: url("images/elephant.jpg") no-repeat fixed center;
+	background-size: cover;
+	padding: 200px;
+	margin: 15px;
+}
+
+/* FOR CALENDAR.HTML */
+
+.calendar table {
 	width: 100%;
-	border: 2px solid #0000ff;
-	border-radius: 5px;
-	background-color: #00ff00;
-	transition: background-color 300ms;
+	float: right;
+	background: linear-gradient(to bottom right, rgb(150, 255, 255), rgb(255, 255, 150));
+	border: 1px solid black;
+	border-collapse: collapse;
 }
 
-th {
-	vertical-align: top;
+.calendar th {
+	border-style: solid;
+	border-color: black;
+	border-width: 1px 1px 0px 1px;
+	font-size: 30px;
+	letter-spacing: 2px;
+	color: white;
+	text-shadow: 1px 1px 2px black, 0 0 25px blue;
+	width: 25%;
+	padding-top: 10px;
+}
+
+.calendar th:hover {
+	transform: scale(1.5, 1.5);
+}
+
+.calendar td {
+	border-style: solid;
+	border-width: 0px 1px 1px 1px;
+	width: 25%;
+	padding: 5px;
+}
+
+.calendar img {
+	border: 1px solid white;
+	border-radius: 4px;
+	border-width: 5px;
+	width: 90%;
+	margin: auto;
+	vertical-align: middle;
+}
+
+.calendar img:hover {
+	transform: scale(1.15, 1.15);
+}
+
+.calendar #year {
+	font-size: 40px;
 	padding: 10px;
 }
 
-th, td {
-	border-bottom: 1px solid #0000ff;
+.calendar #year:hover {
+	transform: rotate(-10deg);
 }
 
-tr:hover {
-	background-color: #ff00ff;
+/* FOR FAVORITES.HTML */
+
+.favorites {
+	color: black;
+	text-shadow: 1px 1px 2px white, 0 0 25px gray;
+}
+
+.favorites ul {
+	font-weight: bold;
+	display: inline-block;
+}
+
+.favorites li {
+	text-align: left;
+	font-weight: normal;
+}
+
+.favorites img {
+	display: block;
+	width: 100px;
+}
+
+.favorites a {
+	color: blue;
+	text-decoration: none;
+	text-decoration: underline;
+}
+
+.italics {
+	text-align: left;
+	font-style: italic;
+	display: inline-block;
 }
