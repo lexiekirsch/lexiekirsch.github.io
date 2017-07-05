@@ -144,7 +144,6 @@ h1:hover {
 .favorites img {
 	display: block;
 	width: 100px;
-	margin: auto;
 }
 
 .favorites a {
