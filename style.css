@@ -149,11 +149,13 @@ h1:hover {
 	padding-left: 30px;
 	padding-right: 30px;
 	vertical-align: middle;
+	line-height: 180%;
 }
 
 .favorites li {
 	text-align: left;
 	font-weight: normal;
+	line-height: 100%;
 }
 
 .favorites img {
@@ -161,6 +163,7 @@ h1:hover {
 	width: 100px;
 	margin: auto;
 	transition: transform 5s;
+	padding: 5px;
 }
 
 .favorites img:hover {
