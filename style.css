@@ -1,189 +1,35 @@
 
-/* animation */
-
-@keyframes rainbow {
-	0% {background-color: rgba(255, 0, 0, 0.5);}
-	20% {background-color: rgba(255, 165, 0, 0.5);}
-	40% {background-color: rgba(255, 255, 0, 0.5);}
-	60% {background-color: rgba(0, 255, 0, 0.5);}
-	80% {background-color: rgba(0, 0, 255, 0.5);}
-	90% {background-color: rgba(75, 0, 130, 0.5);}
-	100% {background-color: rgba(255, 0, 0, 0.5);}
-}
-
-/* body */
+/* note */
 
 body {
 	font-family: Helvetica;
+	margin: 20px;
 	text-align: center;
-	background: red;
-	animation-name: rainbow;
-	animation-duration: 30s;
-	animation-iteration-count: infinite;
 }
-
-/* headers */
 
 h1 {
-	color: white;
-	text-shadow: 1px 1px 2px black, 0 0 25px gray;
-	display: inline-block;
-	transition: transform 0.3s;
+	text-align: center;
 }
 
-h1:hover {
-	transform: scale(1.2, 1.2);
-}
-
-/* buttons */
-
-.button {
-	text-decoration: none;
-	color: black;
-	background-color: white;
-	border: 2px solid gray;
-	border-radius: 5px;
+.box-left{
+	width: 45%;
+	margin: 10px;
 	padding: 10px;
-	transition-duration: 0.3s;
-}
-
-.button:hover {
-	background-color: #e7e7e7;
-}
-
-#home {
-	margin: 5px;
-	display: inline-block;
+	border: 2px solid black;
 	float: left;
 }
 
-/* FOR INDEX.HTML */
-
-.index h1 {
-	display: block;
-}
-
-.cover img {
-	width: 50%;
-	max-width: 100%;
-	padding: 20px;
-	border-radius: 30px;
-	transition: transform 3s;
-}
-
-.cover img:hover {
-	transform: rotateY(180deg);
-}
-
-/* FOR CALENDAR.HTML */
-
-.calendar table {
-	width: 100%;
+.box-right{
+	width: 45%;
+	margin: 10px;
+	padding: 10px;
+	border: 2px solid black;
 	float: right;
-	background: linear-gradient(to bottom right, rgb(150, 255, 255), rgb(255, 255, 150));
-	border: 1px solid black;
-	border-collapse: collapse;
 }
 
-.calendar th {
-	border-style: solid;
-	border-color: black;
-	border-width: 1px 1px 0px 1px;
-	font-size: 30px;
-	letter-spacing: 2px;
-	color: white;
-	text-shadow: 1px 1px 2px black, 0 0 25px blue;
-	width: 25%;
-	padding-top: 10px;
-	transition: transform 0.3s;
-}
-
-.calendar th:hover {
-	transform: scale(1.5, 1.5);
-}
-
-.calendar td {
-	border-style: solid;
-	border-width: 0px 1px 1px 1px;
-	width: 25%;
-	padding: 5px;
-}
-
-.calendar img {
-	border: 1px solid white;
-	border-radius: 4px;
-	border-width: 5px;
-	width: 90%;
-	margin: auto;
-	vertical-align: middle;
-	transition: transform 0.3s;
-}
-
-.calendar img:hover {
-	transform: scale(1.15, 1.15);
-}
-
-.calendar #year {
-	font-size: 40px;
-	padding: 10px;
-}
-
-.calendar #year:hover {
-	transform: rotate(-10deg);
-}
-
-/* FOR FAVORITES.HTML */
-
-.favorites {
-	color: black;
-}
-
-.favorites ul {
-	font-weight: bold;
-	display: inline-block;
-	border: 2px dotted black;
-	border-radius: 5px;
-	width: 15%;
-	min-width: 120px;
-	margin: 5px;
-	padding: 10px;
-	padding-left: 30px;
-	padding-right: 30px;
-	vertical-align: middle;
-	line-height: 180%;
-}
-
-.favorites li {
-	text-align: left;
-	font-weight: normal;
-	line-height: 100%;
-}
-
-.favorites img {
-	display: block;
-	width: 100px;
-	margin: auto;
-	transition: transform 5s;
-	padding: 5px;
-}
-
-.favorites img:hover {
-	transform: rotate(-360deg);
-}
-
-.favorites a {
-	color: blue;
-	text-decoration: none;
-	text-decoration: underline;
-}
-
-.italics {
-	text-align: left;
-	font-style: italic;
-	display: inline-block;
-}
-
-/* FOR TINYHOUSE.HTML */
 video {
-	width: 80%;
+	border: 1px solid black;
+	float: right;
+	width: 50%;
+	margin-left: 10px;
 }
