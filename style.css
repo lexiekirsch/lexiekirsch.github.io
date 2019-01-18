@@ -1,46 +1,16 @@
 /* style.css for index.html */
-/* by Lexie Kirsch */
 
-/* Properties to consider: background-color, color, font-size: (%) */
-/* To edit a single element, use an id in the html file and use #special in CSS file */
-/* To edit groups of elements, use a class in the html file and use .special in the CSS file */
+/* To edit a single element, 
+	use an id in the html file and use #name in CSS file */
+/* To edit groups of elements, 
+	use a class in the html file and use .name in the CSS file */
 
 body {
-	font-family: Helvetica;
-	margin: 20px;
-	text-align: center;
+	font-family: Avenir;
+	margin: 80px;
 }
 
-/*
-.box {
-	border: 2px solid black;
-	margin: 10px;
-	padding: 10px;
-	min-height: 150px;
-	min-width: 500px;
-}
-
-.box p {
-	width: 45%;
-	float: left;
-}
-
-*/
-
-.half-box {
-	border: 2px solid black;
-	display: inline-block;
-	margin: 10px;
-	padding: 10px;
-	width: 80%;
-}
-
-img {
-	border: 1px solid black;
-	width: 80%;
-}
-
-video {
+img, video {
 	border: 1px solid black;
 	width: 80%;
 }
