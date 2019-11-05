@@ -1,0 +1,73 @@
+/* style.css for puzzle.html */
+
+/* To edit a single element, 
+	use an id in the html file and use #name in CSS file */
+/* To edit groups of elements, 
+	use a class in the html file and use .name in the CSS file */
+
+body {
+	font-family: Avenir; 
+	margin: 80px;
+	letter-spacing: 0.26px;
+}
+
+h1 {
+	text-align: center;
+}
+
+h1, h2 {
+	font-weight: lighter;
+}
+
+a {
+	color: black;
+}
+
+p {
+	margin: 0;
+	padding: 0;
+}
+
+#intro{
+	color: black;
+}
+
+.pig {
+	width: 50px;
+	height: 50px;
+	float: left;
+	border: 0px;
+}
+
+#ninepigs {
+	color: pink;
+	font-weight: bold;
+}
+
+.pen {
+	width: 50px;
+	height: 50px;
+	border: 1px solid #aaaaaa;
+	float: left;
+}
+
+.pen p {
+	text-align: center;
+	font-weight: bold;
+	color: pink;
+	line-height: 50px;
+}
+
+.egg {
+	width: 100px;
+	height: 100px;
+}
+
+#egg1 {
+	width: 80px;
+	padding-left: 10px;
+}
+
+.house {
+	width: 70%;
+}

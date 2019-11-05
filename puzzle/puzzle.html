@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+
+<html> 
+
+<head>
+	<title>Puzzle</title>
+	<link rel="stylesheet" type="text/css" href="puzzle-style.css">
+</head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<body>
+
+	<h1>Welcome to Lexie's Puzzle</h1>
+	<hr>
+
+	<div id="intro">
+		<h2>Rules of the game</h2>
+			<ul>
+				<li>Don't cheat</li>
+				<li>Have fun</li>
+				<li>Click <a onclick="openP1()">here</a> to begin</li>
+			</ul>
+		<hr>
+	</div>
+
+	<div id="puzzle1" hidden>
+		<h2>Puzzle 1</h2>
+			<p>Click the <a id="hint1" onmouseover="hintP1()" onmouseout="nohintP1()">right</a> 
+				<a id="num1" onmouseover="boldnum1()" onmouseout="unboldnum1()">one</a>:</p><br>
+			<button>First</button>
+			<button>Second</button>
+			<button>Third</button>
+			<button>Fourth</button>
+			<button onclick="openP2()">Fifth</button>
+		<hr>
+	</div>
+
+	<div id="puzzle2" hidden>
+		<h2>Puzzle 2</h2>
+			<p>Fit <text id="ninepigs" ondragstart="dragStart(event)" draggable="true">nine pigs</text> into <a id="num2" onmouseover="boldnum2()" onmouseout="unboldnum2()">eight</a> pig pens</p><br>
+			<img class="pig" id="pig1" src="pig.png" ondragstart="dragStart(event)" draggable="true">
+			<img class="pig" id="pig2" src="pig.png" ondragstart="dragStart(event)" draggable="true">
+			<img class="pig" id="pig3" src="pig.png" ondragstart="dragStart(event)" draggable="true">
+			<img class="pig" id="pig4" src="pig.png" ondragstart="dragStart(event)" draggable="true">
+			<img class="pig" id="pig5" src="pig.png" ondragstart="dragStart(event)" draggable="true">
+			<img class="pig" id="pig6" src="pig.png" ondragstart="dragStart(event)" draggable="true">
+			<img class="pig" id="pig7" src="pig.png" ondragstart="dragStart(event)" draggable="true">
+			<img class="pig" id="pig8" src="pig.png" ondragstart="dragStart(event)" draggable="true">
+			<img class="pig" id="pig9" src="pig.png" ondragstart="dragStart(event)" draggable="true">
+			<br><br><br>
+			<div class="pen" id="pigpen1" ondrop="drop(event)" ondragover="allowDrop(event)"><p id="pen1"></p></div>
+			<div class="pen" id="pigpen2"ondrop="drop(event)" ondragover="allowDrop(event)"><p id="pen2"></p></div>
+			<div class="pen" id="pigpen3" ondrop="drop(event)" ondragover="allowDrop(event)"><p id="pen3"></p></div>
+			<div class="pen" id="pigpen4" ondrop="drop(event)" ondragover="allowDrop(event)"><p id="pen4"></p></div>
+			<br><br><br>
+			<div class="pen" id="pigpen5" ondrop="drop(event)" ondragover="allowDrop(event)"><p id="pen5"></p></div>
+			<div class="pen" id="pigpen6" ondrop="drop(event)" ondragover="allowDrop(event)"><p id="pen6"></p></div>
+			<div class="pen" id="pigpen7" ondrop="drop(event)" ondragover="allowDrop(event)"><p id="pen7"></p></div>
+			<div class="pen" id="pigpen8" ondrop="drop(event)" ondragover="allowDrop(event)"><p id="pen8"></p></div>
+			<br><br><br><br>
+		<hr>
+	</div>
+
+	<div id="puzzle3" hidden>
+		<h2>Puzzle 3</h2>
+			<p>You've made such progress! Time to crack puzzle <a id="num3" onmouseover="boldnum3()" onmouseout="unboldnum3()">three</a>.</p><br>
+			<img class="egg" id="egg1" src="egg1.png" ondblclick="crackEgg1()">
+			<img class="egg" id="egg2" src="egg2.png" hidden ondblclick="crackEgg2()">
+			<img class="egg" id="egg3" src="egg3.png" hidden ondblclick="crackEgg3()">
+			<img class="egg" id="egg4" src="egg4.png" hidden>			
+		<hr>
+	</div>
+	
+	<div id="puzzle4" hidden>
+		<h2>Puzzle 4</h2>
+			<p>I like a house with <i>small windows</i>... Select the home that's right for me.</p>
+			<picture>
+				<source srcset="house1.jpg" media="(max-width: 600px)">
+				<source srcset="house2.jpg" media="(max-width: 1100px)">
+				<source srcset="house3.jpg" media="(max-width: 1500px)">
+				<img onclick="openP5()" class="house" src="house2.jpg">
+			</picture>
+			<p id="hint4"></p>
+		<hr>
+	</div>
+
+	<div id="puzzle5" hidden>
+		<h2><a id="hint5" onmouseover="openhint5()" onmouseout="closehint5()">Puzzle 5</a></h2>
+			<p>Type in the code:</p>
+			<input type="text" id="key" class="entry-box" value="" placeholder="???">
+			<button onclick="keycode()">Enter</button>
+			<p id="help5"></p>
+		<hr>
+	</div>
+
+	<div id="end" hidden>
+		<h2>Congrats! You did it!</h2>
+		<img src="celebrate.gif">
+	</div>
+
+</body>
+
+<script>
+	function openP1()   { document.getElementById("puzzle1").removeAttribute("hidden"); }
+	
+	// PUZZLE 1
+	function boldnum1()   { document.getElementById("num1").style.fontWeight = "bold"; }
+	function unboldnum1() { document.getElementById("num1").style.fontWeight = "normal"; }
+	function hintP1()   { document.getElementById("hint1").innerHTML = "rightmost"; }
+	function nohintP1() { document.getElementById("hint1").innerHTML = "right"; }
+    function openP2()   { document.getElementById("puzzle2").removeAttribute("hidden"); }
+    
+    // PUZZLE 2
+    function boldnum2()   { document.getElementById("num2").style.fontWeight = "bold"; }
+	function unboldnum2() { document.getElementById("num2").style.fontWeight = "normal"; }
+    function dragStart(event) { event.dataTransfer.setData("Text", event.target.id); }
+    function allowDrop(event) { event.preventDefault(); }
+    function drop(event) {
+    	event.preventDefault();
+    	var data = event.dataTransfer.getData("Text");
+    	if (event.target.childNodes.length == 1) { // "empty" pen
+    		event.target.appendChild(document.getElementById(data));
+    	}
+    	if (data == "ninepigs") { 
+    		for (i=1; i < 9; i++) {
+    			var pens = document.getElementById("pigpen" + [i]);
+    			if (pens.childNodes[1] != null) { pens.removeChild(pens.childNodes[1]); }
+    		}
+    		document.getElementById("pen1").innerHTML = "N";
+    		document.getElementById("pen2").innerHTML = "I";
+    		document.getElementById("pen3").innerHTML = "N";
+    		document.getElementById("pen4").innerHTML = "E";
+    		document.getElementById("pen5").innerHTML = "P";
+    		document.getElementById("pen6").innerHTML = "I";
+    		document.getElementById("pen7").innerHTML = "G";
+    		document.getElementById("pen8").innerHTML = "S";
+    		document.getElementById("puzzle3").removeAttribute("hidden"); 
+    	}
+    }
+
+   	// PUZZLE 3
+   	function boldnum3()   { document.getElementById("num3").style.fontWeight = "bold"; }
+	function unboldnum3() { document.getElementById("num3").style.fontWeight = "normal"; }
+   	function crackEgg1(){
+   		document.getElementById("egg1").style.display = "none";
+   		document.getElementById("egg2").removeAttribute("hidden");
+   	}
+   	function crackEgg2(){
+   		document.getElementById("egg2").style.display = "none";
+   		document.getElementById("egg3").removeAttribute("hidden");
+   	}
+   	function crackEgg3(){
+   		document.getElementById("egg3").style.display = "none";
+   		document.getElementById("egg4").removeAttribute("hidden");
+   		document.getElementById("puzzle4").removeAttribute("hidden");
+   	}
+
+    // PUZZLE 4
+    function openP5() {
+    	if (window.innerWidth < 600) { 
+    		document.getElementById("puzzle5").removeAttribute("hidden"); 
+    	}
+    	else {
+    		document.getElementById("hint4").innerHTML = "Hint: try making the house smaller..."
+    	}
+    }
+
+    // PUZZLE 5
+    function openhint5() {
+    	document.getElementById("hint5").innerHTML = "Hint: look for clues in puzzle messages";
+    }
+    function closehint5() {
+    	document.getElementById("hint5").innerHTML = "Puzzle 5";
+    }
+    function keycode() {
+    	var ans = document.getElementById("key").value;
+    	if (ans == 183 || ans == "one eight three") {
+    		document.getElementById("help5").innerHTML = "";
+    		document.getElementById("end").removeAttribute("hidden");
+    	}
+    	else {
+    		document.getElementById("help5").innerHTML = "Try again.";
+    	}
+    }
+
+</script>
+</html>
