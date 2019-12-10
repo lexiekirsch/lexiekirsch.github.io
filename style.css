@@ -1,26 +1,126 @@
-/* style.css for index.html */
-
-/* To edit a single element, 
-	use an id in the html file and use #name in CSS file */
-/* To edit groups of elements, 
-	use a class in the html file and use .name in the CSS file */
+/* STYLE.CSS */
 
 body {
 	font-family: Avenir;
-	margin: 80px;
-	text-align: left;
+	margin-left: 80px;
+	margin-right: 80px;
 	letter-spacing: 0.26px;
 }
-
 h1, h2, h3 {
 	font-weight: lighter;
 }
-
+img, iframe {
+	height: 200px;
+}
 img, video {
-	border: 1px solid black;
-	width: 80%;
+	padding: 5px;
+}
+video {
+	height: 200px;
+}
+iframe {
+	width: 200px;
+}
+a {
+	color: #3064D8;
 }
 
-a {
-	color: blue;
+/* GENERAL CLASSES */
+.blue {
+	font-weight: bold;
+	color: #3064D8;
+}
+.inline-block { /* for fixed width items like iframes */
+	width: 200px;
+	display: inline-block;
+	padding: 10px;
+	text-align: center;
+}
+.inline-block-free { /* for items w/o fixed width, like videos */
+	width: auto;
+	display: inline-block;
+	padding: 10px;
+	text-align: center;
+}
+.block {
+	display: block;
+}
+.centered {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	vertical-align: middle;
+}
+
+/* NAVIGATION */
+.navbar {
+	margin: 10px;
+	width: 100%;
+	overflow: auto;
+}
+.navbar a {
+	float: right;
+	padding: 12px;
+	color: black;
+	text-decoration: none;
+	font-size: 12px;
+}
+.navbar a:hover {
+	text-decoration: underline;
+	text-underline-position: under;
+}
+.active {
+	font-weight: bold;
+}
+
+/* RESUME.HTML IDs */
+#full-page { width: 80%; height: 1000px; }
+
+/* PUZZLE */
+.puzzle img {
+	border: 0px;
+}
+.puzzle a {
+	color: black;
+}
+.puzzle p {
+	margin: 0;
+	padding: 0;
+}
+.puzzle #intro {
+	color: black;
+}
+.puzzle .pig {
+	width: 80%;
+	width: 50px;
+	height: 50px;
+	float: left;
+	border: 0px;
+}
+.puzzle #ninepigs {
+	color: pink;
+	font-weight: bold;
+}
+.puzzle .pen {
+	width: 50px;
+	height: 50px;
+	border: 1px solid #aaaaaa;
+	float: left;
+}
+.puzzle .pen p {
+	text-align: center;
+	font-weight: bold;
+	color: pink;
+	line-height: 50px;
+}
+.puzzle .egg {
+	width: 100px;
+	height: 100px;
+}
+.puzzle #egg1 {
+	width: 80px;
+	padding-left: 10px;
+}
+.puzzle .house {
+	width: 70%;
 }

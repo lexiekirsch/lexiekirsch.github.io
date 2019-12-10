@@ -7,107 +7,64 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
-<body>
+<body onload="populateMedExamples()">
+	<div class="navbar">
+		<a href="puzzle.html">Puzzle</a>
+		<a href="papers.html">Papers</a>
+		<a href="projects.html">Projects</a>
+		<a href="resume.html">Resume</a>
+		<a class="active" href="index.html">Home</a>
+	</div>
 
-	<h1>Hi, my name is Lexie Kirsch</h1>
-	<hr>
-
-	<!-- INTRO -->
-	<h2>I am a Human Factors Engineer</h2>
-		<p>I graduated from Tufts University with a B.S. in Engineering Psychology in May 2018, and now I'm pursuing my M.S. in Human Factors Engineering, also at Tufts University, expected May 2019.</p>
-		<p>Here is my <a href="resume.pdf" target="_blank">resume</a>.</p>
-		<p>And here's a <a href="puzzle/puzzle.html" target="_blank">puzzle</a> ;)</p>
-	<hr>
+	<p>Hi, my name is <a class="blue">Lexie Kirsch</a>.</p>
+		<p>I am a Human Factors Engineer <br> seeking use-related problems to solve, <br> usability studies to run, data to analyze, <br> risks to mitigate, &amp; user experiences to improve. </p>
 	
-	<!-- MEDICAL -->
-	<h2>I'm interested in applying human factors to improve medical devices</h2>
-	<h3>Medical Projects</h3>
-		<ul>
-			<li><a href="Grad/BetterPresentation.pdf" target="_blank">Lessons From <i>Better</i> by Atul Gawande</a></li>
-			<li><a href="Grad/CompetitiveAssessment.pdf" target="_blank">Competitive Assessment of Stethoscopes</a></li>
-			<li><a href="Grad/PrellisBiologics.pdf" target="_blank">Suggestion to Invest in Prellis Biologics</a></li>
-			<li><a href="Grad/ProgramPlan.pdf" target="_blank">Human Factors Program Plan</a></li>
-			<li><a href="Grad/GlucoseReview.pdf" target="_blank">Glucose Meter Review</a></li>
-			<li><a href="Grad/SafetyCalendar.pdf" target="_blank">Safety Calendar</a></li>
-			<li><a href="Grad/WarningPlacard.pdf" target="_blank">Nebulizer Warning Placard</a></li>
-		</ul>
-		<h3>Human Factors Projects</h3>
-		<ul>
-			<li><a href="Senior/capstone.pdf" target="_blank">Sit-Stand Storage Solution (2018)</a></li>
-			<li><a href="Grad/capstone.pdf" target="_blank">Tufts Social App (2019)</a></li>
-		</ul>
 	<hr>
+		<p>I graduated from <a class="blue">Tufts University</a> in May 2019 with a Masters in Human Factors Engineering. My focus was on applying human factors to medical technology to reduce medical error.</p>
+		<div class="centered">
+			<img src="images/graduation.jpeg"><img src="images/hairnet.jpeg"><img src="images/manikin.jpeg">
+		</div>
+		<p>Below are some of my projects:</p>
+		<div class="centered" id="medical">
+			<script>
+				var medData = ["Grad/BetterPresentation.pdf", "Grad/CompetitiveAssessment.pdf", "Grad/PrellisBiologics.pdf", "Grad/ProgramPlan.pdf", "Grad/GlucoseReview.pdf", "Grad/SafetyCalendar.pdf", "Grad/WarningPlacard.pdf"];
+				var medNames = ["Lessons From Better by Atul Gawande", "Competitive Assessment of Stethoscopes", "Suggestion to Invest in Prellis Biologics", "Human Factors Program Plan", "Human Factors Glucose Meter Review", "2019 Device Safety Calendar", "Warning Placard for a Nebulizer"];
 
-	<!-- PROJECTS -->
-	<h2>But I also dabble in CS, CAD, UI design, etc</h2>
-		<h3>Data Visualization</h3>
-			<video controls>
-				<source src="Grad/CoffeeVis.mp4" type="video/mp4">
-			</video>
-		<h3>Computer-Aided Design</h3>
-			<p>(AutoCAD and 3ds Max)</p>
-			<img src="Senior/CAD.jpg">
-			<p>How to <b>Escape My Room</b> in 10 seconds:</p>
-			<video controls>
-				<source src="Senior/EscapeRoom.mp4" type="video/mp4">
-			</video>
-			<p>(SketchUp)</p>
-			<video controls>
-				<source src="Misc/tinyhouse.mp4" type="video/mp4">
-			</video>
-		<h3>Human-Machine Systems</h3>
-			<p>I worked in a team of four students to design a human-machine system, using two Lego Mindstorms controllers, that could identify, load, and launch a projectile 1-2 meters.</p>
-			<video controls>
-				<source src="Senior/projectile.mp4" type="video/mp4">
-			</video>
-		<h3>User Interfaces</h3>
-		<ul>
-			<li><a href="Junior/ui1barista.pdf" target="_blank">Starbucks Vending Machine</a></li>
-			<li><a href="Junior/ui2headphones.pdf" target="_blank">Headphone Website</a></li>
-			<li><a href="Junior/ui3piano.pdf" target="_blank">Comparative Assessment of Piano Websites</a></li>
-			<li><a href="Junior/ui4justocat.pdf" target="_blank">Robotic Cat Application</a></li>
-			<li><a href="Junior/ui5ehang.pdf" target="_blank">Ehang 184 (autonomous aerial vehicle)</a></li>
-			<li><a href="Junior/ui6whirlpool.pdf" target="_blank">Design Checklist for Whirlpool</a></li>
-			<li><a href="Junior/ui7papi.pdf" target="_blank">Red Sox Game Tablet</a></li>
-		</ul>
-	<hr>
-	
-	<!-- PAPERS -->
-	<h2>And sometimes I write papers</h2>
-		<h3>Research Papers</h3>
-		<ul>
-			<li><a href="Sophomore/Sit-stand-station.pdf" target="_blank">Literature Review of Sit Stand Workstations</a></li>
-			<li><a href="Junior/choice-overload.pdf" target="_blank">Redesigning the Purchasing Process: Preventing Choice Overload to Maximize Satisfaction</a></li>
-			<li><a href="Senior/mindfulness.pdf" target="_blank">How Mindfulness Meditation Can Improve Your Life</a></li>
-			<li><a href="Senior/wmc.pdf" target="_blank">How to Improve Working Memory Capacity: An Analysis of Working Memory Training, Physical Activity, and Mindfulness Meditation</a></li>
-		</ul>
-		<h3>Philosophy Papers</h3>
-		<ul>
-			<li><a href="Freshman/PHIL-NLT.pdf" target="_blank">A Rejection of Natural Law Theory</a></li>
-			<li><a href="Freshman/PHIL-Utilitarianism.pdf" target="_blank">An Objection to Utilitarianism</a></li>
-			<li><a href="Freshman/PHIL-Kant.pdf" target="_blank">A Rejection of Kant's Categorical Imperative</a></li>
-			<li><a href="Freshman/PHIL-Abortion.pdf" target="_blank">The Ethics of Abortions</a></li>
-		</ul>
-		<h3>Blogs</h3>
-		<ul>
-			<li><a href="Senior/imaginaryfriend.pdf" target="_blank">How to Bring Your Imaginary Friend to Life</a></li>
-			<li><a href="Senior/stereograms.pdf" target="_blank">Stereograms</a></li>
-			<li><a href="Senior/colors.pdf" target="_blank">What Colors Symbolize</a></li>
-		</ul>
-		<h3>Other Written Work</h3>
-		<ul>
-			<li><a href="Sophomore/ApplevFBI.pdf" target="_blank">Engineering Leadership: Apple vs FBI</a></li>
-			<li><a href="Sophomore/SOC.pdf" target="_blank">Sociology: Self and Identity</a></li>
-			<li><a href="Junior/dairy-milk.pdf" target="_blank">Public Speaking: Why You Should Stop Drinking Dairy Milk</a></li>
-			<li><a href="Junior/iopsych.pdf" target="_blank">Industrial/Organizational Psychology: FINDR Analysis</a></li>
-			<li><a href="Junior/ergochair.pdf" target="_blank">Industrial/Organizational Psychology: Ergonomic Chair Worksheet</a></li>
-			<li><a href="Junior/water-fountain.pdf" target="_blank">Product Design: Redesigning the Drinking Water Fountain</a></li>
-			<li><a href="Junior/usability.pdf" target="_blank">Product Design: Usability Study</a></li>
-		</ul>
-	<hr>
+				function populateMedExamples() {
+					for (i = 0; i < 7; i++) {
+						var div = document.createElement("div");
+						div.setAttribute('class', 'inline-block');
+			
+						var link = document.createElement("a");
+						link.setAttribute('href', medData[i]);
+						link.setAttribute('target', "_blank");
+						link.innerText = medNames[i];
 
-	<h3>Thanks for taking some time to get to know me!</h3>
-	<p>You can contact me at Alexandra.Kirsch(at)Tufts(dot)edu</p>
+						var iframe = document.createElement("iframe");
+						iframe.setAttribute('src', medData[i]);
+
+						div.appendChild(link);
+						div.appendChild(iframe);
+
+						medBlock = document.getElementById("medical");
+						medBlock.appendChild(div);
+					}
+				}
+			</script>
+		</div>
+
+	<hr>
+		<p>Now I work at <a class="blue">Farm Design</a>,<br> a medical device design consultancy <br> in Hollis, New Hampshire.</p>
+		<div class="centered">
+			<img src="Misc/farmpd.jpg"><img src="images/farm.jpeg"><img src="images/chicago.jpeg"><img src="images/fieldwork.jpeg"><img src="Misc/bedsidetable.jpeg">
+		</div>
+		<p>At Farm I've familiarized myself with a variety of different medical devices, from auto-injectors to blood analyzers; I've moderated both formative and summative usability studies; and I've analyzed data and written reports... <br>I've also traveled to Massachusetts, Chicago, Wisconsin, and Colorado for testing; I've assembled and dressed training manikins; I've acquired quite a collection of Fieldwork plushies; and I've built a bedside table in the machine shop!</p>
+
+	<hr>
+		<p>In my <a class="blue">spare time</a>, you can find me escaping escape rooms and crushing my friends at word games :).</p>
+		<div class="centered">
+			<img src="images/escaperoom1.jpg"><img src="images/escaperoom2.jpeg"><img src="images/bananagrams.jpeg">
+		</div>
 
 </body>
 

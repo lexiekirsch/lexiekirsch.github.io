@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html> 
+
+<head>
+	<title>Lexie Kirsch</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body onload="populateUIExamples()">
+
+	<div class="navbar">
+		<a href="puzzle.html">Puzzle</a>
+		<a href="papers.html">Papers</a>
+		<a class="active" href="projects.html">Projects</a>
+		<a href="resume.html">Resume</a>
+		<a href="index.html">Home</a>
+	</div>
+
+	<h1>Projects</h1><hr>
+
+		<p class="blue">Human Factors Capstones</p>
+			<div class="centered">
+				<a href="Senior/capstone.pdf" target="_blank">Sit-Stand Storage Solution</a><br>
+					<iframe src="Senior/capstone.pdf"></iframe>
+					<img src="images/desk1.jpeg">
+					<img src="images/desk2.jpeg">
+					<img src="images/desk3.jpeg">
+					<img src="images/desk4.jpeg">
+					<img src="images/desk5.jpeg">
+				<br>
+				<a href="Grad/capstone.pdf" target="_blank">Tufts Social App</a><br>
+				<iframe src="Grad/capstone.pdf"></iframe>
+			</div>
+
+		
+		<p class="blue">CS, CAD, etc</p>
+			<div class="centered">
+				<div class="inline-block-free">
+					<p>Coffee Data Visualization (d3)</p>
+					<video controls><source src="Grad/CoffeeVis.mp4" type="video/mp4"></video>
+				</div>
+				<div class="inline-block-free">
+					<p>Computer-Aided Design (AutoCAD)</p>
+					<img src="Senior/CAD.jpg">
+				</div>
+				<div class="inline-block-free">
+					<p>How to <i>Escape My Room</i> <br>in 10 seconds (3ds Max)</p>
+					<video controls><source src="Senior/EscapeRoom.mp4" type="video/mp4"></video>
+				</div>
+				<div class="inline-block-free">
+					<p>Projectile Launcher (Lego Mindstorms)</p>
+					<video controls><source src="Senior/projectile.mp4" type="video/mp4"></video>
+				</div>
+			</div>
+	
+
+		<p class="blue">User Interface Design</p>
+			<div class="centered" id="ui"></div>
+				<script>
+					var uiData = ["Junior/ui1barista.pdf", "Junior/ui2headphones.pdf", "Junior/ui3piano.pdf", "Junior/ui4justocat.pdf", "Junior/ui5ehang.pdf", "Junior/ui6whirlpool.pdf", "Junior/ui7papi.pdf"];
+					var uiNames = ["Starbucks Vending Machine", "Headphone Website", "Comparative Assessment of Piano Websites", "Robotic Cat Application", "Ehang 184 (autonomous aerial vehicle)", "Design Checklist for Whirlpool", "Red Sox Game Tablet"];
+
+					function populateUIExamples() {
+						for (i = 0; i < 7; i++) {
+							var div = document.createElement("div");
+							div.setAttribute('class', 'inline-block');
+				
+							var link = document.createElement("a");
+							link.setAttribute('href', uiData[i]);
+							link.setAttribute('target', "_blank");
+							link.innerText = uiNames[i];
+							div.appendChild(link);
+
+							var iframe = document.createElement("iframe");
+							iframe.setAttribute('src', uiData[i]);
+							div.appendChild(iframe);
+
+							uiBlock = document.getElementById("ui");
+							uiBlock.appendChild(div);
+						}
+					}
+				</script>
+		
+		<p class="blue">Just for fun</p>
+			<div class="centered">
+				<div class="inline-block-free">
+					<p>Building a Tiny House (SketchUp)</p>
+					<video controls><source src="Misc/tinyhouse.mp4" type="video/mp4"></video>	
+				</div>
+				<div class="inline-block-free">
+					<p>Learning to solder at the SMFA</p>
+					<img src="images/solder.jpeg">
+				</div>
+			</div>
+		<hr>
+
+</body>
+
+</html>

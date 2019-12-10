@@ -1,14 +1,31 @@
 /* style.css for puzzle.html */
 
-/* To edit a single element, 
-	use an id in the html file and use #name in CSS file */
-/* To edit groups of elements, 
-	use a class in the html file and use .name in the CSS file */
-
 body {
 	font-family: Avenir; 
 	margin: 80px;
 	letter-spacing: 0.26px;
+}
+
+.navbar {
+	width: 100%;
+	overflow: auto;
+}
+
+.navbar a {
+	float: right;
+	padding: 12px;
+	color: black;
+	text-decoration: none;
+	font-size: 15px;
+}
+
+.navbar a:hover {
+	text-decoration: underline;
+	text-underline-position: under;
+}
+
+.active {
+	font-weight: bold;
 }
 
 h1 {

@@ -4,16 +4,23 @@
 
 <head>
 	<title>Puzzle</title>
-	<link rel="stylesheet" type="text/css" href="puzzle-style.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <body>
 
-	<h1>Welcome to Lexie's Puzzle</h1>
-	<hr>
+	<div class="navbar">
+		<a class="active" href="puzzle.html">Puzzle</a>
+		<a href="papers.html">Papers</a>
+		<a href="projects.html">Projects</a>
+		<a href="resume.html">Resume</a>
+		<a href="index.html">Home</a>
+	</div>
 
+	<h1>Puzzle</h1>
+	<p>(which does not work on mobile yet, sorry)</p>
+	<hr>
+	<div class="puzzle">
 	<div id="intro">
 		<h2>Rules of the game</h2>
 			<ul>
@@ -39,15 +46,15 @@
 	<div id="puzzle2" hidden>
 		<h2>Puzzle 2</h2>
 			<p>Fit <text id="ninepigs" ondragstart="dragStart(event)" draggable="true">nine pigs</text> into <a id="num2" onmouseover="boldnum2()" onmouseout="unboldnum2()">eight</a> pig pens</p><br>
-			<img class="pig" id="pig1" src="pig.png" ondragstart="dragStart(event)" draggable="true">
-			<img class="pig" id="pig2" src="pig.png" ondragstart="dragStart(event)" draggable="true">
-			<img class="pig" id="pig3" src="pig.png" ondragstart="dragStart(event)" draggable="true">
-			<img class="pig" id="pig4" src="pig.png" ondragstart="dragStart(event)" draggable="true">
-			<img class="pig" id="pig5" src="pig.png" ondragstart="dragStart(event)" draggable="true">
-			<img class="pig" id="pig6" src="pig.png" ondragstart="dragStart(event)" draggable="true">
-			<img class="pig" id="pig7" src="pig.png" ondragstart="dragStart(event)" draggable="true">
-			<img class="pig" id="pig8" src="pig.png" ondragstart="dragStart(event)" draggable="true">
-			<img class="pig" id="pig9" src="pig.png" ondragstart="dragStart(event)" draggable="true">
+			<img class="pig" id="pig1" src="puzzle/pig.png" ondragstart="dragStart(event)" draggable="true">
+			<img class="pig" id="pig2" src="puzzle/pig.png" ondragstart="dragStart(event)" draggable="true">
+			<img class="pig" id="pig3" src="puzzle/pig.png" ondragstart="dragStart(event)" draggable="true">
+			<img class="pig" id="pig4" src="puzzle/pig.png" ondragstart="dragStart(event)" draggable="true">
+			<img class="pig" id="pig5" src="puzzle/pig.png" ondragstart="dragStart(event)" draggable="true">
+			<img class="pig" id="pig6" src="puzzle/pig.png" ondragstart="dragStart(event)" draggable="true">
+			<img class="pig" id="pig7" src="puzzle/pig.png" ondragstart="dragStart(event)" draggable="true">
+			<img class="pig" id="pig8" src="puzzle/pig.png" ondragstart="dragStart(event)" draggable="true">
+			<img class="pig" id="pig9" src="puzzle/pig.png" ondragstart="dragStart(event)" draggable="true">
 			<br><br><br>
 			<div class="pen" id="pigpen1" ondrop="drop(event)" ondragover="allowDrop(event)"><p id="pen1"></p></div>
 			<div class="pen" id="pigpen2"ondrop="drop(event)" ondragover="allowDrop(event)"><p id="pen2"></p></div>
@@ -65,10 +72,10 @@
 	<div id="puzzle3" hidden>
 		<h2>Puzzle 3</h2>
 			<p>You've made such progress! Time to crack puzzle <a id="num3" onmouseover="boldnum3()" onmouseout="unboldnum3()">three</a>.</p><br>
-			<img class="egg" id="egg1" src="egg1.png" ondblclick="crackEgg1()">
-			<img class="egg" id="egg2" src="egg2.png" hidden ondblclick="crackEgg2()">
-			<img class="egg" id="egg3" src="egg3.png" hidden ondblclick="crackEgg3()">
-			<img class="egg" id="egg4" src="egg4.png" hidden>			
+			<img class="egg" id="egg1" src="puzzle/egg1.png" ondblclick="crackEgg1()">
+			<img class="egg" id="egg2" src="puzzle/egg2.png" hidden ondblclick="crackEgg2()">
+			<img class="egg" id="egg3" src="puzzle/egg3.png" hidden ondblclick="crackEgg3()">
+			<img class="egg" id="egg4" src="puzzle/egg4.png" hidden>			
 		<hr>
 	</div>
 	
@@ -76,9 +83,9 @@
 		<h2>Puzzle 4</h2>
 			<p>I like a house with <i>small windows</i>... Select the home that's right for me.</p>
 			<picture>
-				<source srcset="house1.jpg" media="(max-width: 600px)">
-				<source srcset="house2.jpg" media="(max-width: 1100px)">
-				<source srcset="house3.jpg" media="(max-width: 1500px)">
+				<source srcset="puzzle/house1.jpg" media="(max-width: 600px)">
+				<source srcset="puzzle/house2.jpg" media="(max-width: 1100px)">
+				<source srcset="puzzle/house3.jpg" media="(max-width: 1500px)">
 				<img onclick="openP5()" class="house" src="house2.jpg">
 			</picture>
 			<p id="hint4"></p>
@@ -96,7 +103,9 @@
 
 	<div id="end" hidden>
 		<h2>Congrats! You did it!</h2>
-		<img src="celebrate.gif">
+		<img src="puzzle/celebrate.gif">
+	</div>
+
 	</div>
 
 </body>
