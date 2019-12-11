@@ -74,11 +74,12 @@ a {
 }
 
 /* RESUME.HTML IDs */
-#full-page { width: 80%; height: 1000px; }
+#resume { width: 80%; height: 800px;}
 
 /* PUZZLE */
 .puzzle img {
 	border: 0px;
+	padding: 0px;
 }
 .puzzle a {
 	color: black;
@@ -122,5 +123,6 @@ a {
 	padding-left: 10px;
 }
 .puzzle .house {
+	height: auto;
 	width: 70%;
 }
