@@ -7,7 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
-<body onload="populateMedExamples()">
+<body>
 	<div class="navbar">
 		<a href="puzzle.html">Puzzle</a>
 		<a href="papers.html">Papers</a>
@@ -20,48 +20,21 @@
 		<p>I am a Human Factors Engineer <br> seeking use-related problems to solve, <br> usability studies to run, data to analyze, <br> risks to mitigate, &amp; user experiences to improve. </p>
 	
 	<hr>
-		<p>I graduated from <a class="blue">Tufts University</a> in May 2019 with a Masters in Human Factors Engineering. My focus was on applying human factors to medical technology to reduce medical error <a href="https://www.hopkinsmedicine.org/news/media/releases/study_suggests_medical_errors_now_third_leading_cause_of_death_in_the_us">(the third leading cause of death in America!)</a>.</p>
+		<p>I graduated from <a class="blue">Tufts University</a> in May 2019<br> with a Masters in Human Factors Engineering and a certificate in Human Factors in Medical Devices and Systems.</p>
 		<div class="centered">
 			<img src="images/graduation.jpeg"><img src="images/hairnet.jpeg"><img src="images/manikin.jpeg">
 		</div>
-		<p>Below are some of my projects--they range from a book synopsis to a warning placard for a nebulizer.</p>
-		<div class="centered" id="medical">
-			<script>
-				var medData = ["Grad/BetterPresentation.pdf", "Grad/CompetitiveAssessment.pdf", "Grad/PrellisBiologics.pdf", "Grad/ProgramPlan.pdf", "Grad/GlucoseReview.pdf", "Grad/SafetyCalendar.pdf", "Grad/WarningPlacard.pdf"];
-				var medNames = ["Lessons From Better by Atul Gawande", "Competitive Assessment of Stethoscopes", "Suggestion to Invest in Prellis Biologics", "Human Factors Program Plan", "Human Factors Glucose Meter Review", "2019 Device Safety Calendar", "Warning Placard for a Nebulizer"];
-
-				function populateMedExamples() {
-					for (i = 0; i < 7; i++) {
-						var div = document.createElement("div");
-						div.setAttribute('class', 'inline-block');
-			
-						var link = document.createElement("a");
-						link.setAttribute('href', medData[i]);
-						link.setAttribute('target', "_blank");
-						link.innerText = medNames[i];
-
-						var iframe = document.createElement("iframe");
-						iframe.setAttribute('src', medData[i]);
-
-						div.appendChild(link);
-						div.appendChild(iframe);
-
-						medBlock = document.getElementById("medical");
-						medBlock.appendChild(div);
-					}
-				}
-			</script>
-		</div>
+		<p>At Tufts University, I learned how to design experiments, perform statistical analyses, and visualize information.</p>
 
 	<hr>
-		<p>Now I work at <a class="blue">Farm Design</a>,<br> a medical device design consultancy <br> in Hollis, New Hampshire.</p>
+		<p>Then I worked at <a class="blue">Farm Design</a>,<br> a medical device design consultancy in Hollis, New Hampshire.</p>
 		<div class="centered">
-			<img src="Misc/farmpd.jpg"><img src="images/farm.jpeg"><img src="images/chicago.jpeg"><img src="images/fieldwork.jpeg"><img src="Misc/bedsidetable.jpeg">
+			<img src="images/farmpd.jpg"><img src="images/farm.jpeg"><img src="images/chicago.jpeg"><img src="images/fieldwork.jpeg">
 		</div>
-		<p>At Farm I've familiarized myself with a variety of different medical devices, from auto-injectors and pen injectors to blood analyzers; I've moderated formative and summative usability studies; and I've analyzed data and written reports... <br>I've also traveled to Boston, Waltham, Chicago, Milwaukee, Charlotte, Atlanta, Tampa, and Denver for testing; I've assembled and dressed training manikins; I've acquired quite a collection of Fieldwork plushies; and I've built a bedside table in the machine shop!</p>
+		<p>At Farm Design, I built upon my academic foundation with direct experience conducting usability assessments and authoring documentation within an ISO 13485-certified quality system. I also co-authored <a target="_blank" href="https://doi.org/10.2345/0899-8205-54.3.178">an article featured in AAMI's BI&T</a> that demonstrates how to use the MAUDE and FDA's Recall databases to mitigate risk.</p>
 
 	<hr>
-		<p>In my <a class="blue">spare time</a>, you can find me escaping escape rooms and crushing my friends at word games :).</p>
+		<p>In my <a class="blue">spare time</a>, you can find me escaping escape rooms and playing word games :).</p>
 		<div class="centered">
 			<img src="images/escaperoom1.jpg"><img src="images/escaperoom2.jpeg"><img src="images/escaperoom3.jpeg"><img src="images/escaperoom4.jpeg"><img src="images/bananagrams.jpeg">
 		</div>

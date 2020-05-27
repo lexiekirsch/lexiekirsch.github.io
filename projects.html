@@ -7,7 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
-<body onload="populateUIExamples()">
+<body onload="loadContent()">
 
 	<div class="navbar">
 		<a href="puzzle.html">Puzzle</a>
@@ -17,9 +17,44 @@
 		<a href="index.html">Home</a>
 	</div>
 
+	<script>
+		function loadContent() {
+			populateMedExamples();
+			populateUIExamples();
+		}
+	</script>
+
 	<h1>Projects</h1><hr>
 
-		<p class="blue">Human Factors Capstones</p>
+		<p class="blue">Human Factors Projects</p>
+			<div class="centered" id="medical"></div>
+			<script>
+				var medData = ["Grad/BetterPresentation.pdf", "Grad/CompetitiveAssessment.pdf", "Grad/PrellisBiologics.pdf", "Grad/ProgramPlan.pdf", "Grad/GlucoseReview.pdf", "Grad/SafetyCalendar.pdf", "Grad/WarningPlacard.pdf"];
+				var medNames = ["Lessons From Better by Atul Gawande", "Competitive Assessment of Stethoscopes", "Suggestion to Invest in Prellis Biologics", "Human Factors Program Plan", "Human Factors Glucose Meter Review", "2019 Device Safety Calendar", "Warning Placard for a Nebulizer"];
+
+				function populateMedExamples() {
+					for (i = 0; i < 7; i++) {
+						var div = document.createElement("div");
+						div.setAttribute('class', 'inline-block');
+			
+						var link = document.createElement("a");
+						link.setAttribute('href', medData[i]);
+						link.setAttribute('target', "_blank");
+						link.innerText = medNames[i];
+
+						var iframe = document.createElement("iframe");
+						iframe.setAttribute('src', medData[i]);
+
+						div.appendChild(link);
+						div.appendChild(iframe);
+
+						medBlock = document.getElementById("medical");
+						medBlock.appendChild(div);
+					}
+				}
+			</script>
+
+		<p class="blue">Capstone Projects</p>
 			<div class="centered">
 				<a href="Senior/capstone.pdf" target="_blank">Sit-Stand Storage Solution</a><br>
 					<iframe src="Senior/capstone.pdf"></iframe>

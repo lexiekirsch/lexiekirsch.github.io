@@ -126,3 +126,9 @@ a {
 	height: auto;
 	width: 70%;
 }
+
+/* HF PUZZLE */
+.HFpen {
+	width: 40%;
+	float: left;
+}
