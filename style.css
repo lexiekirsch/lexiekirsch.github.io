@@ -128,10 +128,10 @@ a {
 .puzzle p {
 	margin: 0;
 	padding: 0;
+	font-family: Avenir;
 }
 .puzzle button {
 	color: var(--main-text-color);
-	font-family: var(--main-text-font);
 }
 .puzzle img {
 	border: 0px;
